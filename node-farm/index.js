@@ -1,7 +1,7 @@
 const fs  =  require('fs');
 const http =  require('http');
 const url =  require('url');
-
+// const slugify  =  require('slugify');;
 
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`,'utf-8');
 const templateHome = fs.readFileSync(`${__dirname}/templates/template-home.html`,'utf-8');
@@ -25,6 +25,7 @@ const replaceHTML = (template,data)=>{
     return output;
 }
 
+// console.log(slugify('Fresh Avocados',{lower: true}));
 const server = http.createServer((req,res)=>{
   
  const {pathname , query} = url.parse(req.url,true);
@@ -64,11 +65,11 @@ const server = http.createServer((req,res)=>{
     res.writeHead(404,{"Content-Type":"text/html","my-own-header":"hello-world"});
     res.end("<H1>404 Page Not Found!<H1>");
 }
-})
+});
 
 server.listen(8000,'localhost',()=>{
     console.log("Listening to requests at port 8000");
-})
+});
 
 
 

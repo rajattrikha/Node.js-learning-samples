@@ -1,0 +1,25 @@
+{
+  "name": "node-farm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajattrikha/Node.js-learning-samples.git"
+  },
+  "author": "Rajat Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajattrikha/Node.js-learning-samples/issues"
+  },
+  "homepage": "https://github.com/rajattrikha/Node.js-learning-samples#readme",
+  "dependencies": {
+    "slugify": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
